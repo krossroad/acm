@@ -1,0 +1,14 @@
+{
+    "name": "krossroad/acm",
+    "description": "ACM Lib",
+    "require": {
+        "phpunit/phpunit": "4.3"
+    },
+    "authors": [
+        {
+            "name": "krossroad",
+            "email": "krossroad07@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
