@@ -1,14 +1,16 @@
 {
     "name": "krossroad/acm",
     "description": "ACM Lib",
-    "require": {
-        "phpunit/phpunit": "4.3"
-    },
     "authors": [
         {
             "name": "krossroad",
             "email": "krossroad07@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "Apputilities\\Acm": "src/"
+        }
+    },
     "minimum-stability": "dev"
 }
