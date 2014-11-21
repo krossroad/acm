@@ -24,7 +24,7 @@ class Acm
 
     }
 
-    public function boot()
+    public static function boot()
     {
         if (is_null(self::$acmSentry)) {
             self::$acmSentry = new AcmSentry();
