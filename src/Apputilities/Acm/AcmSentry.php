@@ -91,6 +91,10 @@ class AcmSentry
     {
         // @todo: your logic
         $userGroup = $user->getGroup();
+        if (! ($userGroup instanceof AcmGroupProvider)) {
+            throw new \Exception("Invalid Group set for given User");
+        }
+
         $permissions = null;
 
         if ($userGroup) {
