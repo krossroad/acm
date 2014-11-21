@@ -16,7 +16,13 @@ class Acm
         self::boot();
 
         if (method_exists(self::$acmSentry, $name)) {
-            return self::$acmSentry->$name($args);
+            return call_user_func_array(
+                [
+                    self::$acmSentry,
+                    $name
+                ],
+                $args
+            );
 
         } else {
             throw new \Exception('Method you are looking for doesn\'t exists.');
