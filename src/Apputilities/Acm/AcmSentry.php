@@ -2,7 +2,7 @@
 
 namespace Apputilities\Acm;
 
-use Apputilities\Acm\AcmGroupProviderInteface as AcmGroupProvider;
+use Apputilities\Acm\AcmGroupProviderInterface as AcmGroupProvider;
 use Apputilities\Acm\AcmPermissionProviderInteface as AcmPermissionProvider;
 
 /**
