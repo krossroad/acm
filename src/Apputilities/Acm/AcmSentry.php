@@ -47,7 +47,7 @@ class AcmSentry
         $permissionKeys = (array) $this->parsePermissions($permission);
 
         foreach ($permissionKeys as $key) {
-            if (! isset($userPermissions[$key])) {
+            if (! in_array($key, $userPermissions)) {
                 $flag = false;
                 break;
             }
@@ -74,7 +74,7 @@ class AcmSentry
         $permissionKeys = (array) $this->parsePermissions($permission);
 
         foreach ($permissionKeys as $key) {
-            if (isset($userPermissions[$key])) {
+            if (in_array($key, $userPermissions)) {
                 $flag = true;
                 break;
             }
