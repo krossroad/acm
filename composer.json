@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Apputilities\\Acm": "src/"
+            "Apputilities": "src/"
         }
     },
     "minimum-stability": "dev"
