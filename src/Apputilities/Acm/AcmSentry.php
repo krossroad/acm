@@ -71,7 +71,7 @@ class AcmSentry
 
         $flag = false;
         $userPermissions = $this->fetchUserPermission($user);
-        $permissionKeys = (array) $this->parsePermissions($permission);
+        $permissionKeys = (array) $this->parsePermissions($permissions);
 
         foreach ($permissionKeys as $key) {
             if (in_array($key, $userPermissions)) {
@@ -98,6 +98,13 @@ class AcmSentry
         $permissions = null;
 
         if ($userGroup) {
+            /**
+             *  @todo
+             *  It is possible that permission
+             *  array could be huge which will eat-up
+             *  all the memory
+             *  So go for alternative solution
+             */
             $permissions = $userGroup->hydrateGroupPermissions();
         }
 
